@@ -1,0 +1,17 @@
+node_modules
+dist
+build
+artifacts
+coverage
+
+.idea
+.env
+.yarnrc
+.env
+.npmrc
+.orig
+.vscode
+
+
+*.log
+.DS_Store
