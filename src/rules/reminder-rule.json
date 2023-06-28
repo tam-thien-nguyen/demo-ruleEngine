@@ -1,0 +1,29 @@
+{
+	"name": "checkDate",
+	"attributes": [
+		{
+			"name": "purchasedDay",
+			"type": "string"
+		}
+	],
+	"decisions": [
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "purchasedDay",
+						"operator": "olderThan",
+						"value": 7
+					}
+				]
+			},
+			"event": {
+				"type": "reminder",
+				"params": {
+					"type": "sendEmail",
+					"message": "Dear customer, etc...."
+				}
+			}
+		}
+	]
+}

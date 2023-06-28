@@ -1,0 +1,52 @@
+{
+	"name": "two-rabatt",
+	"attributes": [
+		{
+			"name": "quantity",
+			"type": "number"
+		}
+	],
+	"decisions": [
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "quantity",
+						"operator": "greaterThan",
+						"value": 5
+					},
+					{
+						"fact": "quantity",
+						"operator": "lessThan",
+						"value": 10
+					}
+				]
+			},
+			"event": {
+				"type": "payment",
+				"params": {
+					"event": "reduce-price",
+					"message": "5%"
+				}
+			}
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "quantity",
+						"operator": "greaterThan",
+						"value": 10
+					}
+				]
+			},
+			"event": {
+				"type": "payment",
+				"params": {
+					"event": "reduce-price",
+					"message": "10%"
+				}
+			}
+		}
+	]
+}

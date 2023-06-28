@@ -3,8 +3,7 @@ import { Response } from "express";
 export const sendSuccess = ( res: Response, docs: any, message?: string) => {
     res.status(200).send({
         data:  {
-            status: 'success',
-            docs: docs,
+            docs,
             message: message
         }
     })
