@@ -38,7 +38,7 @@ router.post('/rule/payment', async function (req, res) {
 
        sendSuccess(res, result);
  
-    }catch (error){
+    } catch (error){
         console.log('Internal Server Error ', error)
         sendInternalError(res, new Error('Can not execute the payment s rule'))
     }
